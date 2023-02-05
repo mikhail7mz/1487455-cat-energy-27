@@ -1,0 +1,57 @@
+.subheading {
+  margin-top: 0;
+  font: 24px/26px var(--font-secondary);
+  color: var(--color-dark);
+
+  @media #{$not-mobile} {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.subheading--lined {
+  position: relative;
+  width: fit-content;
+
+  @media #{$not-mobile} {
+    padding-left: 36px;
+  }
+
+  @media #{$desktop-only} {
+    padding-left: 0;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    width: 100vw;
+    top: 15px;
+    height: 2px;
+    background-color: var(--color-accent);
+    content: "";
+
+    @media #{$not-mobile} {
+      top: 23px;
+    }
+  }
+
+  &::before {
+    right: calc(100% + 22px);
+
+    @media #{$not-mobile} {
+      right: 100%;
+    }
+
+    @media #{$desktop-only} {
+      right: calc(100% + 40px);
+    }
+  }
+
+  &::after {
+    left: calc(100% + 22px);
+
+    @media #{$not-mobile} {
+      left: calc(100% + 36px);
+    }
+  }
+}

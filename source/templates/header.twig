@@ -1,0 +1,28 @@
+<header class="header {% if permalink == 'index.html' %}header--theme-green {% endif %}header--no-js page__container">
+  <a class="header__logo logo{% if permalink == 'index.html' %} logo--current{% endif %}" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %} aria-label="Логотип сайта. Переход на главную.">
+    <svg class="logo__image" width="33" height="38" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <use class="logo__icon logo__icon--mobile" xlink:href="img/stack.svg#icons_logo-mobile"/>
+      <use class="logo__icon logo__icon--tablet" xlink:href="img/stack.svg#icons_logo-tablet"/>
+      <use class="logo__icon logo__icon--desktop" xlink:href="img/stack.svg#icons_logo-desktop"/>
+    </svg>
+    <svg class="logo__text" width="101" height="18" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <use class="logo__text-icon" xlink:href="img/stack.svg#icons_logo-text"/>
+    </svg>
+  </a>
+  <nav class="header__menu">
+    <button class="header__menu-button" type="button">
+      <span class="visually-hidden">Кнопка открытия меню.</span>
+    </button>
+    <ul class="header__menu-list">
+      {% for page in pages %}
+        <li class="header__menu-item {{ (permalink == page.path) ? 'header__menu-item--current' }}">
+          <a class="header__menu-link"
+            href="{{ page.path }}"
+            {% if permalink == page.name %}aria-current="page"{% endif %}>
+            <span class="header__menu-link-text">{{page.name}}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

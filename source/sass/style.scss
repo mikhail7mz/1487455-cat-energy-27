@@ -1,1 +1,22 @@
-// Начните писать стили здесь
+@import "./global/media.scss";
+@import "./global/mixins.scss";
+@import "./global/fonts.scss";
+@import "./global/variables.scss";
+@import "./global/global.scss";
+@import "./blocks/page.scss";
+@import "./blocks/heading.scss";
+@import "./blocks/subheading.scss";
+@import "./blocks/breaker.scss";
+@import "./blocks/button.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/header.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/social.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/categories.scss";
+@import "./blocks/key-points.scss";
+@import "./blocks/example.scss";
+@import "./blocks/products.scss";
+@import "./blocks/additional-products.scss";
+@import "./blocks/visually-hidden.scss";

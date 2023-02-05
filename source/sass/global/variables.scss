@@ -1,0 +1,17 @@
+:root {
+  --color-primary: #444444;
+  --color-dark: #000000;
+  --color-light: #ffffff;
+  --color-accent: #68b738;
+  --background-primary: #ffffff;
+  --background-secondary: #f2f2f2;
+  --page-offset: 20px;
+
+  @media #{$not-mobile} {
+    --page-offset: 30px;
+  }
+
+  @media #{$desktop-only} {
+    --page-offset: 110px;
+  }
+}

@@ -8,3 +8,9 @@
     line-height: 60px;
   }
 }
+
+.heading--linespacingless {
+  @media #{$mobile-only} {
+    line-height: 36px;
+  }
+}

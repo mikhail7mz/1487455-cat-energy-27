@@ -1,0 +1,122 @@
+.form {
+  padding-top: 37px;
+
+  @media #{$not-mobile} {
+    padding-top: 54px;
+  }
+
+  @media #{$desktop-only} {
+    padding-top: 56px;
+  }
+}
+
+.form__intro {
+  margin: 0;
+  margin-bottom: 39px;
+  font: 14px/18px var(--font-secondary);
+  color: var(--color-dark);
+
+  @media #{$not-mobile} {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__control-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.form__control-group--box {
+  position: relative;
+  margin-bottom: 26px;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    width: 100vw;
+    height: 1px;
+    background-color: #d9d9d9;
+    transform: translateX(-50%);
+    content: "";
+  }
+
+  &::before {
+    top: -1px;
+  }
+
+  &::after {
+    bottom: -1px;
+  }
+}
+
+.form__control {
+  display: flex;
+  column-gap: 13px;
+  font: 16px/18px var(--font-secondary);
+  text-transform: uppercase;
+  color: inherit;
+  margin-bottom: 14px;
+}
+
+.form__control--vertical {
+  display: block;
+}
+
+.form__control-label {
+  padding-top: 13px;
+  width: max-content;
+  max-width: 50%;
+}
+
+.form__control-input {
+  flex-grow: 1;
+  width: 1px;
+  height: 45px;
+  padding: 14px 20px 13px;
+  border: 1px solid #e7e7e7;
+  font: inherit;
+  text-transform: uppercase;
+  color: inherit;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+    outline: none;
+  }
+}
+
+.form__control-input--error {
+  border: 2px solid #ff8282;
+}
+
+.form__control-checkbox-label {
+  display: flex;
+  column-gap: 15px;
+  padding-top: 6px;
+}
+
+.form__control-checkbox-input ~ .form__control-checkbox-label::before {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: -6px;
+  padding: 7.5px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  background-clip: content-box;
+  content: "";
+}
+
+.form__control-checkbox-input:checked ~ .form__control-checkbox-label::before {
+  background-color: var(--color-accent);
+}

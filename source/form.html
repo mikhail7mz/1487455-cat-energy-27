@@ -4,8 +4,8 @@
 
 {% block main %}
   <main class="page__main">
-    <h1>Подбор программы</h1>
-    <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+    <h1 class="page__container heading heading--linespacingless">Подбор программы</h1>
+    <form class="form page__container" action="https://echo.htmlacademy.ru/" method="post">
       <p class="form__intro">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
       <fieldset class="form__control-group">
@@ -24,24 +24,24 @@
         </label>
       </fieldset>
 
-      <fieldset class="form__control-group">
-        <legend class="form__title">Программа питания.</legend>
+      <fieldset class="form__control-group form__control-group--box">
+        <legend class="visually-hidden">Программа питания.</legend>
         <label class="form__control">
-          <input class="form__control-input visually-hidden" type="radio" name="nutrition-program" value="down" checked>
-          <span class="form__control-label">похудение</span>
+          <input class="form__control-checkbox-input visually-hidden" type="radio" name="nutrition-program" value="down" checked>
+          <span class="form__control-checkbox-label">похудение</span>
         </label>
         <label class="form__control">
-          <input class="form__control-input visually-hidden" type="radio" name="nutrition-program" value="up">
-          <span class="form__control-label">Набор массы</span>
+          <input class="form__control-checkbox-input visually-hidden" type="radio" name="nutrition-program" value="up">
+          <span class="form__control-checkbox-label">Набор массы</span>
         </label>
         <label class="form__control">
-          <input class="form__control-input visually-hidden" type="radio" name="nutrition-program" value="unknown">
-          <span class="form__control-label">Не знаю (Нужен ваш совет)</span>
+          <input class="form__control-checkbox-input visually-hidden" type="radio" name="nutrition-program" value="unknown">
+          <span class="form__control-checkbox-label">Не знаю (Нужен ваш совет)</span>
         </label>
       </fieldset>
 
       <fieldset class="form__control-group">
-        <legend class="form__title">Контактные данные (владельца кота)</legend>
+        <legend class="form__title subheading subheading--lined">Контактные данные (владельца кота)</legend>
         <label class="form__control">
           <span class="form__control-label">E-mail:*</span>
           <input class="form__control-input" type="email" name="email" value="кuklachev@gmail.com" required>
@@ -52,13 +52,13 @@
         </label>
       </fieldset>
 
-      <label class="form__control">
-        <span class="form__title">Комментарий</span>
+      <label class="form__control form__control--vertical">
+        <span class="form__title subheading subheading--lined">Комментарий</span>
         <textarea class="form__control-textarea" name="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
       </label>
 
       <fieldset class="form__control-group">
-        <legend class="form__title">Дополнительно</legend>
+        <legend class="form__title subheading subheading--lined">Дополнительно</legend>
         <label class="form__control">
           <input class="form__control-input visually-hidden" type="checkbox" name="additional" value="sugar" checked>
           <span class="form__control-label">сахарозаменитель</span>

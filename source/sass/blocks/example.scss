@@ -72,6 +72,7 @@
   width: 124px;
   border-radius: 3px;
   text-align: center;
+  overflow: hidden;
 
   @media #{$not-mobile} {
     width: 162px;
@@ -80,6 +81,7 @@
 
 .example__results-value {
   order: -1;
+  flex-grow: 1;
   margin: 0;
   padding: 13px;
   padding-bottom: 8px;
@@ -112,6 +114,7 @@
 
   &::before,
   &::after {
+    flex-shrink: 1;
     align-self: start;
     flex-grow: 1;
     width: 19px;

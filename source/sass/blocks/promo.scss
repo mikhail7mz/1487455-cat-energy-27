@@ -102,7 +102,7 @@
   @media #{$desktop-only} {
     position: absolute;
     top: 141px;
-    left: calc((100vw - 1280px) / 2 + 470px);
+    left: calc((100% - 1280px) / 2 + 470px);
     width: 552px;
   }
 }

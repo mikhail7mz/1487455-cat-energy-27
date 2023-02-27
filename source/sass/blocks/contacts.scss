@@ -23,10 +23,12 @@
 .contacts__details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   column-gap: 2px;
   padding-top: 26px;
   padding-bottom: 26px;
   line-height: 20px;
+  background-color: var(--background-secondary);
 
   @media #{$not-mobile} {
     padding: 56px 70px 61px;
@@ -44,6 +46,10 @@
     padding: 56px 60px 60px 80px;
     background-color: var(--background-primary);
   }
+}
+
+.contacts__details--light {
+  background-color: var(--background-primary);
 }
 
 .contacts__details-caption,

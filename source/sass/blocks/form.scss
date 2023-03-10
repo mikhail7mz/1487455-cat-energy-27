@@ -181,9 +181,20 @@
   }
 
   &:focus {
-    border: 2px solid #444444;
+    border: 1px solid #444444;
+    box-shadow: inset 0 0 0 1px #444444;
     outline: none;
   }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.form__control--error .form__control-input {
+  border-color: var(--color-error);
+  box-shadow: inset 0 0 0 1px var(--color-error);
+  outline: none;
 }
 
 .form__control--email,
@@ -202,6 +213,14 @@
     mask-size: cover;
     content: "";
   }
+
+  &:focus-within::after {
+    background-color: var(--color-accent);
+  }
+}
+
+.form__control--error::after {
+  background-color: var(--color-error);
 }
 
 .form__control--email {
@@ -305,6 +324,28 @@
 
   .form__control-input:checked ~ .form__control-label::before {
     background-image: url("../img/stack.svg#icons_checkbox");
+  }
+}
+
+.form__control--radio,
+.form__control--checkbox {
+  .form__control-label:hover {
+    cursor: pointer;
+
+    &::before {
+      border-color: #bababa;
+    }
+  }
+
+  .form__control-input:focus ~ .form__control-label::before {
+    border: 1px solid #444444;
+    box-shadow: inset 0 0 0 1px #444444;
+    outline: none;
+  }
+
+  .form__control-input:disabled ~ .form__control-label {
+    opacity: 0.3;
+    pointer-events: none;
   }
 }
 

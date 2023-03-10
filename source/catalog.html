@@ -9,6 +9,10 @@
       <ul class="products__list">
         {% for product in products %}
           <li class="products__item">
+            <a class="products__link products__link--image" href="#">
+              {% set alt = "Упаковка " ~ product.title ~ " со вкусом " ~ product.flawor ~ " весом " ~ product.weight ~ "г." %}
+              {% include "./templates/picture.twig" with {name: product.image, class: "products__image", alt: alt} %}
+            </a>
             <div class="products__description">
               <h2 class="products__title">
                 <a class="products__link products__link--title" href="#">{{ product.title ~ " " ~ product.weight ~ " г"}}</a>
@@ -22,10 +26,6 @@
                 <dd class="products__parameters-value">{{ product.price ~ " ₽"}}</dd>
               </dl>
             </div>
-            <a class="products__link products__link--image" href="#">
-              {% set alt = "Упаковка " ~ product.title ~ " со вкусом " ~ product.flawor ~ " весом " ~ product.weight ~ "г." %}
-              {% include "./templates/picture.twig" with {name: product.image, class: "products__image", alt: alt} %}
-            </a>
             <a class="products__button button" href="#">Заказать</a>
           </li>
         {% endfor %}

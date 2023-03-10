@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: grid;
   grid-template-columns: 1fr min-content;
   padding-top: 10px;
@@ -142,24 +142,7 @@
   }
 }
 
-.header--theme-green {
-  @media #{$desktop-only} {
-    $preimage: linear-gradient(rgb(104 183 56 / 0.85), rgb(104 183 56 / 0.85));
-    $postimage: linear-gradient(to right, #4d4d4d, #3e3b42);
-
-    gap: 120px;
-    box-sizing: content-box;
-    max-width: 1220px;
-    margin: 0;
-    padding-left: calc((100% - 1280px) / 2 + 30px);
-    padding-right: calc((100% - 1280px) / 2 + 30px);
-    background-repeat: no-repeat;
-    background-size: 50% 100%, 500px 694px, 50% 100%;
-    background-position: top right, bottom -567px right, top right;
-
-    @include bg-image("promo-background", $preimage, $postimage);
-  }
-
+.header--theme-dark {
   .header__menu-item--current .header__menu-link-text {
     @media #{$desktop-only} {
       border-bottom-color: var(--color-light);
@@ -184,7 +167,7 @@
     }
 
     .header__menu-list {
-      position: static;
+      position: absolute;
       display: flex;
       width: 100%;
     }

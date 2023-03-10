@@ -5,10 +5,6 @@
   @media #{$not-mobile} {
     --page-offset: 30px;
   }
-
-  @media #{$desktop-only} {
-    --page-offset: 110px;
-  }
 }
 
 .page {
@@ -17,6 +13,7 @@
 }
 
 .page__body {
+  position: relative;
   min-width: 320px;
   min-height: 100%;
   margin: 0;

@@ -1,23 +1,17 @@
 .promo {
-  $preimage: linear-gradient(rgb(104 183 56 / 0.85), rgb(104 183 56 / 0.85));
-  $postimage: linear-gradient(to right, #4d4d4d, #3e3b42);
-
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
   padding-top: 27px;
-
-  @include bg-image("promo-background", $preimage, $postimage);
-  background-position: top center;
-  background-size: 100% 302px, 320px 302px, 100% 302px;
-  background-repeat: no-repeat;
   font: 14px/14px var(--font-secondary);
   color: var(--color-light);
   text-transform: uppercase;
   text-align: center;
 
   @media #{$not-mobile} {
+    position: static;
     margin-bottom: 0;
     align-items: start;
     padding-top: 46px;
@@ -27,20 +21,45 @@
     text-align: left;
   }
 
-  .page & {
-    @media #{$tablet-only} {
-      background: none;
-    }
-  }
-
   @media #{$desktop-only} {
     margin-top: -129px;
     margin-bottom: 82px;
     padding-top: 223px;
     max-width: 100%;
     min-height: 694px;
-    background-size: 50% 694px, 500px 694px, 50% 694px;
-    background-position: top right, top right, top right;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 302px;
+    $preimage: linear-gradient(rgb(104 183 56 / 0.85), rgb(104 183 56 / 0.85));
+    $postimage: linear-gradient(to right, #4d4d4d, #3e3b42);
+
+    @include bg-image("promo-background", $preimage, $postimage);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+
+    @media #{$desktop-only} {
+      z-index: auto;
+      left: 50%;
+      width: 50%;
+      height: 694px;
+      background-position: top center, bottom right, top center;
+      background-size: cover, 500px 694px, cover;
+    }
+  }
+
+  .page &::before {
+    @media #{$tablet-only} {
+      display: none;
+    }
   }
 }
 
@@ -51,7 +70,7 @@
 }
 
 .promo__header {
-  order: 0;
+  order: -1;
 
   @media #{$not-mobile} {
     margin-bottom: 29px;
@@ -60,6 +79,7 @@
   }
 
   @media #{$desktop-only} {
+    order: 0;
     max-width: 430px;
     margin-bottom: 31px;
     margin-left: calc((100% - 1280px) / 2 + 110px);
@@ -101,9 +121,9 @@
 
   @media #{$desktop-only} {
     position: absolute;
-    top: 141px;
-    left: calc((100% - 1280px) / 2 + 470px);
+    left: calc((100% - 1280px) / 2 + 478px);
     width: 552px;
+    transform: translateY(-82px);
   }
 }
 

@@ -1,6 +1,8 @@
 <footer class="footer">
   <div class="footer__content page__container">
-    <a class="footer__logo logo logo--text-only{% if permalink == 'index.html' %} logo--current{% endif %}" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}></a>
+    <a class="footer__logo logo logo--text-only{% if permalink == 'index.html' %} logo--current{% endif %}" href="index.html" {% if permalink == "index.html" %}aria-current="page"{% endif %}>
+      <span class="visually-hidden">Логотип сайта. Переход на главную</span>
+    </a>
     <div class="footer__social">
       <ul class="social">
         <li class="social__item">

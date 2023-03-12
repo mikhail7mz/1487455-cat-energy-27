@@ -56,7 +56,7 @@
     "source/sass/**/*.scss"
   ],
   "engines": {
-    "node": "^16"
+    "node": "16.18.x"
   },
   "type": "module"
 }

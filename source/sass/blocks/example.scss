@@ -6,7 +6,7 @@
   @media #{$not-mobile} {
     padding-bottom: 100px;
     background-color: inherit;
-    background-image: linear-gradient(to top, var(--background-secondary) 384px, transparent 384px);
+    background-image: linear-gradient(to top, var(--background-secondary) 462px, transparent 462px);
   }
 
   @media #{$desktop-only} {

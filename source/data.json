@@ -116,6 +116,26 @@
         }
       ]
     },
+    "location": {
+      "ext": "jpg",
+      "sizes": [
+        {
+          "viewport": "desktop",
+          "width": 1440,
+          "height": 400
+        },
+        {
+          "viewport": "tablet",
+          "width": 768,
+          "height": 400
+        },
+        {
+          "viewport": "mobile",
+          "width": 320,
+          "height": 362
+        }
+      ]
+    },
     "chicken500": {
       "ext": "png",
       "sizes": [

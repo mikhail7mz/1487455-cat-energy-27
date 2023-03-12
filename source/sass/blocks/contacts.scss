@@ -6,6 +6,7 @@
 }
 
 .contacts__map {
+  position: relative;
   display: block;
   width: 100%;
   height: 362px;
@@ -17,6 +18,16 @@
   @media #{$desktop-only} {
     grid-area: 1 / -1 / 1 / -1;
     height: 100%;
+  }
+}
+
+.contacts__map--noscript {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .contacts__map-image {
+    display: block;
   }
 }
 

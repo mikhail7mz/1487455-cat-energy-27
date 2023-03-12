@@ -184,10 +184,15 @@
 }
 
 .products__button {
+  flex-grow: 1;
   text-align: center;
 
-  @media #{$desktop-only} {
+  @media #{$not-mobile} {
+    flex-grow: 0;
     margin-top: auto;
+  }
+
+  @media #{$desktop-only} {
     margin-right: 4px;
   }
 }
